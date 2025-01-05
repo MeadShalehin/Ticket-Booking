@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 class Test extends StatefulWidget {
   const Test({super.key});
 
@@ -8,6 +10,10 @@ class Test extends StatefulWidget {
 class _TestState extends State<Test> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Testing Bar")),
+      ),
+    );
   }
 }
