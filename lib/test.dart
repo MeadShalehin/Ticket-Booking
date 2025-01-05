@@ -12,6 +12,7 @@ class _TestState extends State<Test> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.black26,
         title: Center(child: Text("Testing Bar")),
       ),
     );
