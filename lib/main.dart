@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:swift_swap/base/bottom_nav_bar.dart';
 
 void main() {
-  runApp(const MyApp());
+  var myList = [
+    "Flutter",
+    "SwiftUI",
+    "Dart",
+  ];
+  print("${myList.length}");
+  runApp(const MyApp()); // Correct the case to match the class name
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -12,11 +17,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BottomNavBar()
-
+      home: const BottomNavBar(), // Updated to use BottomNavBar as the home
     );
   }
 }
+
+
 
 
 /*class MyHomePage extends StatefulWidget {
