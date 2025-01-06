@@ -15,6 +15,7 @@ class _TestState extends State<Test> {
         backgroundColor: Colors.black,
         title: Center(child: Text("Testing Bar")),
       ),
+      body: Center(child: Text("Containing Body")),
     );
   }
 }
