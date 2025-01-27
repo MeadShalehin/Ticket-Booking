@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swift_swap/base/bottom_nav_bar.dart';
+import 'base/bottom_nav_bar.dart';
+
 
 void main() {
   var myList = [
