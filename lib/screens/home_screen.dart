@@ -10,31 +10,47 @@ class HomeScreen extends StatelessWidget {
         //for scrollable #listview
         body: ListView(
       children: [
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-               const Column(
-                  children: [
-                    Text("Good Morning"),
-                    Text("Book Tickets"),
-                  ],
-                ),
-                Container(
-                  color: Colors.amberAccent,
-                  width: 100,
-                  height: 70,
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Text("text1"),
-                Text("text2"),
-              ],
-            ),
-          ],
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Good Morning",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        "Book Tickets",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
+                  Container(
+                    color: Colors.amberAccent,
+                    width: 100,
+                    height: 70,
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("Search Icon"),
+                  Text("Empty Space"),
+                ],
+              ),
+            ],
+          ),
         )
       ],
     ));
