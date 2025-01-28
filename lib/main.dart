@@ -3,13 +3,16 @@ import 'package:flutter/material.dart';
 import 'base/bottom_nav_bar.dart';
 
 void main() {
-  var myList = [
-    "Flutter",
-    "SwiftUI",
-    "Dart",
-  ];
-  print("${myList.length}");
+
   runApp(const MyApp());
+  var test = TestClass( 2,  3);
+  print(test.x); // Output: 2
+}
+class TestClass{
+  int x;
+  int y;
+
+  TestClass( this.x,  this.y);
 }
 // android app view
 
