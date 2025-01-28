@@ -1,9 +1,20 @@
-import 'package:device_preview/device_preview.dart';
+//import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'base/bottom_nav_bar.dart';
 
-
 void main() {
+  var myList = [
+    "Flutter",
+    "SwiftUI",
+    "Dart",
+  ];
+  print("${myList.length}");
+  runApp(const MyApp());
+}
+// android app view
+
+
+/*void main() {
   var myList = [
     "Flutter",
     "SwiftUI",
@@ -15,7 +26,7 @@ void main() {
       builder: (context) => MyApp(),
     ), // Correctly added the closing parenthesis
   );
-}
+}*/
 //for iOS and other os
 
 
@@ -29,33 +40,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-
-// android app view
-/*void main() {
-  var myList = [
-    "Flutter",
-    "SwiftUI",
-    "Dart",
-  ];
-  print("${myList.length}");
-  runApp(const MyApp()); // Correct the case to match the class name
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const BottomNavBar(), // Updated to use BottomNavBar as the home
-    );
-  }
-}*/
-
-
 
 
 
