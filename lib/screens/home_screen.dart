@@ -18,29 +18,30 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                   Column(
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text(
-                        "Good Morning",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
+                      Text("Good Morning", style: AppStyles.headLineStyle2),
                       const SizedBox(
                         height: 5,
                       ),
-                      Text("Book Tickets",
-                          style: AppStyles.headLineStyle1)
+                      Text("Book Tickets", style: AppStyles.headLineStyle1)
                     ],
                   ),
                   Container(
-                    color: Colors.amberAccent,
-                    width: 100,
-                    height: 70,
-                  ),
-                ],
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      //
+                      borderRadius: BorderRadius.circular(10),
+                      image: DecorationImage(
+                          image: AssetImage("assets/assets/images/logo.png"))
+                    )
+                  )
+                ]
               ),
               Row(
+                // crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("Search Icon"),

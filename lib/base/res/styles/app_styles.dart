@@ -9,5 +9,22 @@ class AppStyles{
   static TextStyle headLineStyle1 = TextStyle(
       fontSize: 26,
       fontWeight: FontWeight.w500,
-      color: AppStyles.textColor);
+      color: textColor);
+
+  static TextStyle headLineStyle2 = const TextStyle(
+      fontSize: 17,
+      fontWeight: FontWeight.w500,
+      );
 }
+
+/*
+class BoxStyles{
+  static Color primaryColor =primary;
+  static Color boxColor= const Color(0xFFFFD740);
+
+  static BoxDecoration boxStyle1 = BoxDecoration(
+    borderRadius: BorderRadius.circular(10), // Use borderRadius here
+    color: boxColor,
+  );
+
+}*/
