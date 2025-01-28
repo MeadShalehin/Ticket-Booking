@@ -13,7 +13,6 @@ void main() {
 }
 // android app view
 
-
 /*void main() {
   var myList = [
     "Flutter",
@@ -29,19 +28,17 @@ void main() {
 }*/
 //for iOS and other os
 
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const BottomNavBar(), // Updated to use BottomNavBar as the home
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: BottomNavBar(), // Updated to use BottomNavBar as the home
     );
   }
 }
-
-
 
 /*class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
