@@ -19,6 +19,7 @@ class AppStyles {
     fontSize: 17,
     fontWeight: FontWeight.w500,
   );
+
 }
 
 /*
