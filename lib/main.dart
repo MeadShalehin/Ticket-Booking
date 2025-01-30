@@ -4,21 +4,11 @@ import 'base/bottom_nav_bar.dart';
 
 void main() {
   runApp(const MyApp());
-  var test = TestClass(x: 4, y: 10);
-  print(test.x);
-  var newTest = test.copyWith(30, 40);
-  print(newTest.x);
+  // ? :
+
 }
 
-class TestClass {
-  int x;
-  int y;
 
-  TestClass({required this.x, required this.y});
-  TestClass copyWith(int? x, int? y) {
-    return TestClass(x: 5, y: 20);
-  }
-}
 // android app view
 
 /*void main() {
