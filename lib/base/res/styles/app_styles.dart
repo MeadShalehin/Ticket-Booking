@@ -1,30 +1,45 @@
 import 'package:flutter/material.dart';
 
-Color primary = const Color(0xFF687daf);
-
 class AppStyles {
-  static Color primaryColor = primary;
-  static Color bgColor = Color(0xFFeeedf2);
-  static Color textColor = const Color(0xFF3b3b3b);
-  static Color ticketBlue = const Color(0xFF546E7A);
-  static Color ticketPeachPuff = const Color(0xFFFFDAB9);
+  // Primary and Theme Colors
+  static const Color primaryColor = Color(0xFF687DAF);
+  static const Color bgColor = Color(0xFFEEEDF2);
+  static const Color textColor1 = Color(0xFF3B3B3B);
+  static const Color ticketBlue = Color(0xFF475C8E);
+  static const Color ticketPeachPuff = Color(0xFFFFCBA3);
+  static const Color textColor2 = Color(0xFFFFFFFF);
 
+  // Text Styles
+  static const TextStyle textStyle = TextStyle(
+    fontSize: 16,
+    color: textColor1,
+    fontWeight: FontWeight.w500,
+  );
 
-  static TextStyle textStyle =
-      TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
+  static const TextStyle headLineStyle1 = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.bold,
+    color: textColor1,
+  );
 
-  static TextStyle headLineStyle1 =
-      TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: textColor);
+  static const TextStyle headLineStyle2 = TextStyle(
+    fontSize: 21,
+    fontWeight: FontWeight.bold,
+  );
 
-  static TextStyle headLineStyle2 =
-      const TextStyle(fontSize: 21, fontWeight: FontWeight.bold);
-
-  static TextStyle headLineStyle3 = const TextStyle(
+  static const TextStyle headLineStyle3 = TextStyle(
     fontSize: 17,
     fontWeight: FontWeight.w500,
   );
 
+  static const TextStyle headLineStyle4 = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: textColor2
+  );
 }
+
+
 
 /*
 class BoxStyles{
