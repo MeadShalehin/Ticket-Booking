@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({Key? key}) : super(key: key);
+  const BottomNavBar({super.key});
 
   @override
   State<BottomNavBar> createState() => _BottomNavBarState();

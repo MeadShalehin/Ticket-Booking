@@ -6,6 +6,7 @@ class CustomText extends StatelessWidget {
   final TextStyle? style;
   final Color? color;
   final double? size;
+  final TextAlign align;
 
   const CustomText({
     super.key,
@@ -13,22 +14,19 @@ class CustomText extends StatelessWidget {
     this.style,
     this.color,
     this.size,
+    this.align = TextAlign.start,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: (style ?? AppStyles.headLineStyle3).copyWith(color: color,
-          fontSize: size),
+      textAlign: align,
+      style: (style ?? AppStyles.headLineStyle3)
+          .copyWith(color: color, fontSize: size),
     );
   }
 }
-
-
-
-
-
 
 ////-----------for copying element with (copywith) we have to declear the element in class,const and the copywith perimeters:
 /*
