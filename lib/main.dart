@@ -9,9 +9,8 @@ void main() {
 }
 
 
-// android app view
 
-/*void main() {
+/*void main() {                //---------------------- android app view
   var myList = [
     "Flutter",
     "SwiftUI",
@@ -23,8 +22,8 @@ void main() {
       builder: (context) => MyApp(),
     ), // Correctly added the closing parenthesis
   );
-}*/
-//for iOS and other os
+}*/                        //---------------------------for iOS and other OS
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -33,73 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavBar(), // Updated to use BottomNavBar as the home
+      home: BottomNavBar(), //--------------------------Updated to use BottomNavBar as the home
     );
   }
 }
-
-/*class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  void _decrementCounter() {
-    setState(() {
-      _counter--;
-    });
-  }
-
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          FloatingActionButton(
-            onPressed: _decrementCounter,
-            tooltip: 'Decrement',
-            child: const Icon(Icons.remove),
-          ),
-          FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
-            child: const Icon(Icons.add),
-          ),
-        ],
-
-      )
-    );
-  }
-}*/

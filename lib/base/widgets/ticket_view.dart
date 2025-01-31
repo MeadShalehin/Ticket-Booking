@@ -4,7 +4,7 @@ import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
 import 'package:ticket_booking_app/base/widgets/big_circle.dart';
 import 'package:ticket_booking_app/base/widgets/big_dot.dart';
 import 'package:ticket_booking_app/base/widgets/app_layout_builder.dart';
-import 'package:ticket_booking_app/base/widgets/icon_animation.dart';
+import 'package:ticket_booking_app/base/widgets/icons_animation.dart';
 
 class TicketView extends StatelessWidget {
   const TicketView({super.key});
@@ -56,7 +56,7 @@ class TicketView extends StatelessWidget {
                                 ],
                               ), // moving icon
 
-                              //fixed icon
+                              //-------------------------------------------------------fixed icon
                               /*Stack(
                                 children: [
                                   const SizedBox(
@@ -83,7 +83,7 @@ class TicketView extends StatelessWidget {
                                     .copyWith(color: Colors.white)),
                           ],
                         ),
-                        //show departure and destination name with time
+                              //-----------------------------------------show departure and destination name with time
                         const SizedBox(height: 3),
                         Row(
                           children: [
@@ -147,7 +147,7 @@ class TicketView extends StatelessWidget {
                                     child: AppLayoutBuilder(randomDivider: 5)),
                                 Center(
                                   child: Transform.rotate(
-                                      angle: 1.5708, //0.7854 for 45°
+                                      angle: 1.5708, //--------------0.7854 for 45°
                                       child: Icon(
                                         Icons.local_airport_rounded,
                                         color: Colors.black,
@@ -164,7 +164,7 @@ class TicketView extends StatelessWidget {
                                     .copyWith(color: Colors.white)),
                           ],
                         ),
-                        //show departure and destination name with time
+                               //------------------------------------------------show departure and destination name with time
                         const SizedBox(height: 3),
                         Row(
                           children: [
