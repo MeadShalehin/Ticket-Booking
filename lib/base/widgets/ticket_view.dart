@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
+import 'package:ticket_booking_app/base/utils/all_json.dart';
 import 'package:ticket_booking_app/base/widgets/big_circle.dart';
 import 'package:ticket_booking_app/base/widgets/big_dot.dart';
 import 'package:ticket_booking_app/base/widgets/app_layout_builder.dart';
@@ -9,7 +10,9 @@ import 'package:ticket_booking_app/base/widgets/icons_animation.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
-  const TicketView({super.key, required this.ticket});
+  final bool wholeScreen;
+
+  const TicketView({super.key, required this.ticket, this.wholeScreen=false});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,7 @@ class TicketView extends StatelessWidget {
       width: size.width * 0.85,
       height: 189,
       child: Container(
-        margin: EdgeInsets.only(right: 16),
+        margin: EdgeInsets.only(right: wholeScreen==true? 0:16),
         child: Column(
           children: [
             Container(
@@ -42,8 +45,8 @@ class TicketView extends StatelessWidget {
                         //show departure
                         Row(
                           children: [
-                            const CustomText(
-                              text: "NYC",
+                              CustomText(
+                              text: ticket["from"]["code"],
                               style: AppStyles.headLineStyle3,
                               color: AppStyles.textColor2,
                             ),
@@ -62,7 +65,7 @@ class TicketView extends StatelessWidget {
                                       width: 3,
                                     ),
                                   ),
-                                  IconAnimation(), // <-- Using the animation widget
+                                  //IconAnimation(), // <-- Using the animation widget
                                 ],
                               ), // moving icon
 
@@ -83,7 +86,7 @@ class TicketView extends StatelessWidget {
                                   ),
                                 ],
                               ),*/
-                            ),
+                            ),       //-----------------------flying icon
 
                             const BigDot(), //BIG dot °
 
@@ -93,7 +96,7 @@ class TicketView extends StatelessWidget {
 
                             CustomText(
                                 //---------------will work same!
-                                text: "LDN",
+                                text: ticket["to"]["code"],
                                 style: AppStyles.headLineStyle3
                                     .copyWith(color: AppStyles.textColor2))
                           ],
@@ -104,21 +107,21 @@ class TicketView extends StatelessWidget {
                           children: [
                             SizedBox(
                               width: 100,
-                              child: const CustomText(
-                                text: "New-York",
+                              child: CustomText(
+                                text: ticket["from"]["name"],
                                 style: AppStyles.headLineStyle4,
                               ),
                             ),
                             Expanded(child: Container()),
                             CustomText(
-                              text: "08H 30M",
+                              text: ticket["flying_time"],
                               style: AppStyles.headLineStyle4,
                             ),
                             Expanded(child: Container()),
                             SizedBox(
                               width: 100,
-                              child: const CustomText(
-                                text: "London",
+                              child: CustomText(
+                                text: ticket["to"]["name"],
                                 align: TextAlign.end,
                                 style: AppStyles.headLineStyle4,
                               ),
@@ -167,17 +170,17 @@ class TicketView extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             ColumnTextLayout(
-                              topText: "1 May",
+                              topText: ticket["date"],
                               bottomText: "Date",
                               alignment: CrossAxisAlignment.start,
                             ),
                             ColumnTextLayout(
-                              topText: "08:00 AM",
+                              topText: ticket["departure_time"],
                               bottomText: "Departure Time",
                               alignment: CrossAxisAlignment.center,
                             ),
                             ColumnTextLayout(
-                              topText: "23",
+                              topText: ticket["number"],
                               bottomText: "Number",
                               alignment: CrossAxisAlignment.end,
                             ),
