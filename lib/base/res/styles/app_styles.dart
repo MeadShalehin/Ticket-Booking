@@ -10,6 +10,9 @@ class AppStyles {
   static const Color textColor2 = Color(0xFFFFFFFF);
   static const Color yellow1 = Color(0xFFFFFDD0);
   static const Color khakiColor = Color(0xFFC3B091);
+  static const Color bluishWhite = Color(0xFFF4F6FD);
+
+
 
   // Text Styles
   static const TextStyle textStyle = TextStyle(
