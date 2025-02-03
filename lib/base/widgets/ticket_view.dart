@@ -65,7 +65,7 @@ class TicketView extends StatelessWidget {
                                       width: 3,
                                     ),
                                   ),
-                                  //IconAnimation(), // <-- Using the animation widget
+                               //   IconAnimation(), // <-- Using the animation widget
                                 ],
                               ), // moving icon
 

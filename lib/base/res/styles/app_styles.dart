@@ -11,6 +11,9 @@ class AppStyles {
   static const Color yellow1 = Color(0xFFFFFDD0);
   static const Color khakiColor = Color(0xFFC3B091);
   static const Color bluishWhite = Color(0xFFF4F6FD);
+  static const Color iconColor = Color(0xFFBFC2DF);
+  static const Color blueColor = Color(0xD91130CE);
+
 
 
 

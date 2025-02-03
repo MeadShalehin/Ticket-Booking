@@ -1,5 +1,5 @@
-/*
 import 'package:flutter/material.dart';
+import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
 
 class IconAnimation extends StatefulWidget {
   final double start;
@@ -39,7 +39,7 @@ class _IconAnimationState extends State<IconAnimation> with SingleTickerProvider
           left: _animation.value, // Moves icon left to right
           child: Transform.rotate(
             angle: 1.5708, // 90° rotation for airplane direction
-            child: Icon(Icons.local_airport_rounded, color: widget.iconColor),
+            child: Icon(Icons.local_airport_rounded, color: AppStyles.iconColor),
           ),
         );
       },
@@ -52,4 +52,3 @@ class _IconAnimationState extends State<IconAnimation> with SingleTickerProvider
     super.dispose();
   }
 }
-*/
