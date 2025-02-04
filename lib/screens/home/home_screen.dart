@@ -99,7 +99,7 @@ class HomeScreen extends StatelessWidget {
                     bigText: 'Hotels',
                     smallText: 'View all',
                     func: () {
-                      print("hello there");
+                      //print("hello there");
                     },
                   ),
                   const SizedBox(height: 20),

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/base/utils/all_json.dart';
 import 'package:ticket_booking_app/base/widgets/ticket_view.dart';
