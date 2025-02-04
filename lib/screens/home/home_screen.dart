@@ -7,6 +7,7 @@ import 'package:ticket_booking_app/base/widgets/app_double_text.dart';
 import 'package:ticket_booking_app/base/widgets/ticket_view.dart';
 import 'package:ticket_booking_app/route/route_path.dart';
 import 'package:ticket_booking_app/screens/home/widgets/hotel.dart';
+//import 'package:video_player/video_player.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -90,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                         children: ticketList
                             .take(3)
                             .map((singleTicket) =>
-                                TicketView(ticket: singleTicket))
+                            TicketView(ticket: singleTicket))
                             .toList(),
                       )),
                   const SizedBox(height: 40),

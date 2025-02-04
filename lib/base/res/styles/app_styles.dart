@@ -13,7 +13,7 @@ class AppStyles {
   static const Color bluishWhite = Color(0xFFF4F6FD);
   static const Color iconColor = Color(0xFFBFC2DF);
   static const Color blueColor = Color(0xD91130CE);
-
+  static Color? grey = Colors.grey[200];
 
 
 
