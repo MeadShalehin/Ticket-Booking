@@ -60,20 +60,27 @@ class HomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(8),
                       color: const Color(0xFFF4F6FD),
                     ),
-                    child: const Row(
+                    child: Row(
                       //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Icon(FluentSystemIcons.ic_fluent_search_regular,
-                            color: Color(0xFFBFC205)),
-                        Spacer(), // Push the text towards the center
-                        Text("Search"),
-                        Spacer(),
+                            color: AppStyles.textColor3),
 
-                        /*Expanded(
-                      child: Center(
-                        child: Text("Search"),
-                      )
-                    )*/
+                        Spacer(), // Push the text towards the center
+
+                        Center(
+                          child: Text(
+                            "Find Tickets",
+                            style: TextStyle(
+                              color: AppStyles.textColor1,
+                            ).copyWith(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+
+                        Spacer(),
                       ],
                     ),
                   ),
@@ -91,16 +98,15 @@ class HomeScreen extends StatelessWidget {
                         children: ticketList
                             .take(3)
                             .map((singleTicket) =>
-                            TicketView(ticket: singleTicket))
+                                TicketView(ticket: singleTicket))
                             .toList(),
                       )),
                   const SizedBox(height: 40),
                   AppDoubleText(
                     bigText: 'Hotels',
                     smallText: 'View all',
-                    func: () {
-                      //print("hello there");
-                    },
+                    func: () =>
+                        Navigator.pushNamed(context, RoutePath.allHotels),
                   ),
                   const SizedBox(height: 20),
                   SingleChildScrollView(

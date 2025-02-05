@@ -1,6 +1,7 @@
 //import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/screens/home/all_tickets.dart';
+import 'package:ticket_booking_app/screens/home/widgets/all_hotels.dart';
 import 'base/bottom_nav_bar.dart';
 
 void main() {
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         routes: {
           "/":(context) => const BottomNavBar(),
-          "/all_tickets": (context) => const AllTickets()});
+          "/all_tickets": (context) => const AllTickets(),
+          "/all_hotels": (context) => const AllHotels()});
   }
 }

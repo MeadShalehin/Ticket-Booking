@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
-import 'package:ticket_booking_app/base/utils/all_json.dart';
 import 'package:ticket_booking_app/base/widgets/big_circle.dart';
 import 'package:ticket_booking_app/base/widgets/big_dot.dart';
 import 'package:ticket_booking_app/base/widgets/app_layout_builder.dart';
@@ -65,7 +64,7 @@ class TicketView extends StatelessWidget {
                                       width: 3,
                                     ),
                                   ),
-                               //   IconAnimation(), // <-- Using the animation widget
+                                  IconAnimation(), // <-- Using the animation widget
                                 ],
                               ), // moving icon
 

@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:ticket_booking_app/base/res/media.dart';
 import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
 
 class Hotel extends StatelessWidget {

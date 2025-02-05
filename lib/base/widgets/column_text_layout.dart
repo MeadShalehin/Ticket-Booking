@@ -18,11 +18,11 @@ class ColumnTextLayout extends StatelessWidget {
     return Column(
       crossAxisAlignment: alignment,
       children: [
-        CustomText(text: topText, color: AppStyles.textColor2),
+        CustomText(text: topText, color: AppStyles.textColor3),
         const SizedBox(
           height: 5,
         ),
-        CustomText(text: bottomText, color: AppStyles.textColor2),
+        CustomText(text: bottomText, color: AppStyles.textColor3),
       ],
     );
   }

@@ -5,9 +5,11 @@ class AppStyles {
   static const Color primaryColor = Color(0xFF687DAF);
   static const Color bgColor = Color(0xFFEEEDF2);
   static const Color textColor1 = Color(0xFF3B3B3B);
+  static const Color textColor2 = Color(0xFFFFFFFF);
+  static const Color textColor3 = Color(0xFF424242);
   static const Color ticketBlue = Color(0xFF475C8E);
   static const Color ticketPeachPuff = Color(0xFFFFCBA3);
-  static const Color textColor2 = Color(0xFFFFFFFF);
+
   static const Color yellow1 = Color(0xFFFFFDD0);
   static const Color khakiColor = Color(0xFFC3B091);
   static const Color bluishWhite = Color(0xFFF4F6FD);
