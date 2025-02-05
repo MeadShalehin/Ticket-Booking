@@ -6,23 +6,38 @@ class ColumnTextLayout extends StatelessWidget {
   final String topText;
   final String bottomText;
   final CrossAxisAlignment alignment;
+  final bool? isColor;
 
-  const ColumnTextLayout(
-      {super.key,
-      required this.topText,
-      required this.bottomText,
-      required this.alignment});
+  const ColumnTextLayout({
+    super.key,
+    required this.topText,
+    required this.bottomText,
+    required this.alignment,
+    this.isColor,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: alignment,
       children: [
-        CustomText(text: topText, color: AppStyles.textColor3),
+        CustomText(
+          text: topText,
+          isColor: isColor, // ✅ Keep isColor
+          style: AppStyles.headLineStyle3.copyWith(
+            color: isColor == null ? AppStyles.textColor3 : AppStyles.ticketColor, // ✅ Your color logic
+          ),
+        ),
         const SizedBox(
           height: 5,
         ),
-        CustomText(text: bottomText, color: AppStyles.textColor3),
+        CustomText(
+          text: bottomText,
+          isColor: isColor, // ✅ Keep isColor
+          style: AppStyles.headLineStyle3.copyWith(
+            color: isColor == null ? AppStyles.textColor3 : AppStyles.ticketColor, // ✅ Your color logic
+          ),
+        ),
       ],
     );
   }

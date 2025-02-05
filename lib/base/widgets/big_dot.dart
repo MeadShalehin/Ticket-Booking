@@ -12,7 +12,7 @@ class BigDot extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           width: 2.5,
-          color: isColor == null ? Colors.white : AppStyles.ticketColor, // Default color when isColor is null
+          color: isColor == null ? Colors.white : AppStyles.dotColor, // Default color when isColor is null
         ),
         borderRadius: BorderRadius.circular(20),
       ),

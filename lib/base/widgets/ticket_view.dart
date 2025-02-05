@@ -48,12 +48,11 @@ class TicketView extends StatelessWidget {
                               CustomText(
                               text: ticket["from"]["code"], isColor: isColor,
                               style: AppStyles.headLineStyle3,
-                              color: AppStyles.textColor2,
+
                             ),
 
                             Expanded(child: Container()),
-
-                            const BigDot(),
+                            BigDot(isColor: isColor,),
 
                             Expanded(
                               child: Stack(
@@ -88,7 +87,7 @@ class TicketView extends StatelessWidget {
                               ),*/
                             ),       //-----------------------flying icon
 
-                            const BigDot(), //BIG dot °
+                            BigDot(isColor: isColor), //----------------BIG dot °
 
                             Expanded(child: Container()),
 
@@ -97,6 +96,7 @@ class TicketView extends StatelessWidget {
                             CustomText(
                                 //---------------will work same!
                                 text: ticket["to"]["code"],
+                                isColor: isColor,
                                 style: AppStyles.headLineStyle3
                                     .copyWith(color: AppStyles.textColor2))
                           ],
@@ -109,12 +109,14 @@ class TicketView extends StatelessWidget {
                               width: 100,
                               child: CustomText(
                                 text: ticket["from"]["name"],
+                                isColor: isColor,
                                 style: AppStyles.headLineStyle4,
                               ),
                             ),
                             Expanded(child: Container()),
                             CustomText(
                               text: ticket["flying_time"],
+                              isColor: isColor,
                               style: AppStyles.headLineStyle4,
                             ),
                             Expanded(child: Container()),
@@ -122,6 +124,7 @@ class TicketView extends StatelessWidget {
                               width: 100,
                               child: CustomText(
                                 text: ticket["to"]["name"],
+                                isColor: isColor,
                                 align: TextAlign.end,
                                 style: AppStyles.headLineStyle4,
                               ),
@@ -134,24 +137,27 @@ class TicketView extends StatelessWidget {
 
                   //--------------------------------------circles and dot
                   Container(
-                    height: 20,
-                    color: AppStyles.ticketPeachPuff,
-                    child: const Row(
+                    color: (isColor ?? false) ? AppStyles.ticketColor : AppStyles.ticketPeachPuff, // Handle null case
+                    child: Row(
                       children: [
                         BigCircle(
                           isRight: false,
+                          isColor: isColor ?? false, // Handle null
                         ),
                         Expanded(
-                            child: AppLayoutBuilder(
-                          randomDivider: 15,
-                          width: 5,
-                        )),
+                          child: AppLayoutBuilder(
+                            randomDivider: 15,
+                            width: 5,
+                          ),
+                        ),
                         BigCircle(
                           isRight: true,
+                          isColor: isColor ?? false, // Handle null
                         ),
                       ],
                     ),
                   ),
+
 
                   //--------------------------------------peach part of the ticket
                   Container(

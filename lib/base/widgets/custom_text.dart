@@ -4,7 +4,7 @@ import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
 class CustomText extends StatelessWidget {
   final String text;
   final TextStyle? style;
-  final Color? color;
+  //final Color? color;
   final double? size;
   final TextAlign align;
   final bool ? isColor;
@@ -13,10 +13,10 @@ class CustomText extends StatelessWidget {
     super.key,
     required this.text,
     this.style,
-    this.color,
+    //this.color,
     this.size,
     this.align = TextAlign.start,
-    this.isColor
+    this.isColor,
   });
 
   @override
@@ -24,9 +24,8 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       textAlign: align,
-      style: (isColor == null || isColor == false)
-          ? (style ?? AppStyles.headLineStyle3).copyWith(color: color, fontSize: size)
-          : style ?? AppStyles.headLineStyle3,
+      style: isColor == null ? AppStyles.headLineStyle3.copyWith(color: Colors.white): AppStyles.headLineStyle4,
+
     );
   }
 }
