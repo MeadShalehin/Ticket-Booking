@@ -10,8 +10,9 @@ import 'package:ticket_booking_app/base/widgets/icons_animation.dart';
 class TicketView extends StatelessWidget {
   final Map<String, dynamic> ticket;
   final bool wholeScreen;
+  final bool? isColor;
 
-  const TicketView({super.key, required this.ticket, this.wholeScreen=false});
+  const TicketView({super.key, required this.ticket, this.wholeScreen=false, this.isColor});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class TicketView extends StatelessWidget {
                   Container(
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      color: AppStyles.ticketBlue,
+                      color: isColor == null? AppStyles.ticketBlue:AppStyles.ticketColor,
                       //color: Colors.white,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(21),
@@ -45,7 +46,7 @@ class TicketView extends StatelessWidget {
                         Row(
                           children: [
                               CustomText(
-                              text: ticket["from"]["code"],
+                              text: ticket["from"]["code"], isColor: isColor,
                               style: AppStyles.headLineStyle3,
                               color: AppStyles.textColor2,
                             ),

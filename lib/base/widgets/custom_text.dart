@@ -7,6 +7,7 @@ class CustomText extends StatelessWidget {
   final Color? color;
   final double? size;
   final TextAlign align;
+  final bool ? isColor;
 
   const CustomText({
     super.key,
@@ -15,6 +16,7 @@ class CustomText extends StatelessWidget {
     this.color,
     this.size,
     this.align = TextAlign.start,
+    this.isColor
   });
 
   @override
@@ -22,8 +24,9 @@ class CustomText extends StatelessWidget {
     return Text(
       text,
       textAlign: align,
-      style: (style ?? AppStyles.headLineStyle3)
-          .copyWith(color: color, fontSize: size),
+      style: (isColor == null || isColor == false)
+          ? (style ?? AppStyles.headLineStyle3).copyWith(color: color, fontSize: size)
+          : style ?? AppStyles.headLineStyle3,
     );
   }
 }

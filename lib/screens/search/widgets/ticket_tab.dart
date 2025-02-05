@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:ticket_booking_app/base/res/styles/app_styles.dart';
 
 class TicketTab extends StatelessWidget {
-  const TicketTab({super.key});
+  final String firstTab;
+  final String secondTab;
+  const TicketTab({super.key, required this.firstTab, required this.secondTab});
 
   @override
   Widget build(BuildContext context) {
@@ -12,13 +14,13 @@ class TicketTab extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: AppStyles.bluishWhite,
       ),
-      child: const Row(
+      child: Row(
         children: [
           AppTabs(
-            tabText: "All tickets",
+            tabText: firstTab,
           ),
           AppTabs(
-            tabText: "Hotels",
+            tabText: secondTab,
             tabBorder: true,
             tabColor: true,
           ),
