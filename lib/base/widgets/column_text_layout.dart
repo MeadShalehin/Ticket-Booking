@@ -23,9 +23,9 @@ class ColumnTextLayout extends StatelessWidget {
       children: [
         CustomText(
           text: topText,
-          isColor: isColor, // ✅ Keep isColor
+          isColor: isColor,
           style: AppStyles.headLineStyle3.copyWith(
-            color: isColor == null ? AppStyles.textColor3 : AppStyles.ticketColor, // ✅ Your color logic
+            color: isColor == null ? AppStyles.textColor3 : AppStyles.ticketColor,
           ),
         ),
         const SizedBox(
@@ -33,9 +33,9 @@ class ColumnTextLayout extends StatelessWidget {
         ),
         CustomText(
           text: bottomText,
-          isColor: isColor, // ✅ Keep isColor
+          isColor: isColor,
           style: AppStyles.headLineStyle3.copyWith(
-            color: isColor == null ? AppStyles.textColor3 : AppStyles.ticketColor, // ✅ Your color logic
+            color: isColor == null ? AppStyles.textColor3 : AppStyles.ticketColor,
           ),
         ),
       ],
